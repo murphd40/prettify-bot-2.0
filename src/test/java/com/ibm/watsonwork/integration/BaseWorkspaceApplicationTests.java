@@ -34,8 +34,6 @@ import static com.ibm.watsonwork.utils.Utils.prepareSHA256Hash;
 @TestPropertySource(locations = "classpath:application.properties")
 public class BaseWorkspaceApplicationTests {
 
-    //
-
     @Autowired
     protected TestRestTemplate restTemplate;
 
