@@ -34,6 +34,8 @@ import static com.ibm.watsonwork.utils.Utils.prepareSHA256Hash;
 @TestPropertySource(locations = "classpath:application.properties")
 public class BaseWorkspaceApplicationTests {
 
+    //
+
     @Autowired
     protected TestRestTemplate restTemplate;
 
@@ -43,7 +45,7 @@ public class BaseWorkspaceApplicationTests {
     @Autowired
     protected WorkspaceProperties workspaceProperties;
 
-    static class MockAuthService implements AuthClient {
+    private static class MockAuthService implements AuthClient {
 
         @Override
         public Call<TokenResponse> authenticateApp(String basicAuthorization, String grantType) {
