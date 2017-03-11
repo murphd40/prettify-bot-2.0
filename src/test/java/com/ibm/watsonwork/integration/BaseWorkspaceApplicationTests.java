@@ -28,9 +28,8 @@ import retrofit2.mock.Calls;
 
 import static com.ibm.watsonwork.utils.Utils.prepareSHA256Hash;
 
-@Ignore
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {ApplicationBootstrap.class, BaseWorkspaceApplicationTests.IntegrationConfigurationBootTest.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = {ApplicationBootstrap.class, BaseWorkspaceApplicationTests.Config.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestPropertySource(locations = "classpath:application.properties")
 public class BaseWorkspaceApplicationTests {
 
@@ -74,7 +73,7 @@ public class BaseWorkspaceApplicationTests {
     }
 
     @Configuration
-    public static class IntegrationConfigurationBootTest {
+    public static class Config {
 
         @Primary
         @Bean
